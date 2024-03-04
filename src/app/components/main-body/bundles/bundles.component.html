@@ -1,1 +1,12 @@
-<p>bundles works!</p>
+<div class="conent-container" *ngIf="bundlesList">
+    <h2>Blorem</h2>
+    <p>Total Bundles Count : <span>{{bundlesList.length}}</span></p>
+    <ul>
+        <li *ngFor="let bundle of bundlesList">
+            <div class="img-wrapper">
+                <img src="{{bundle.displayIcon}}" alt="">
+            </div>
+            <h3>{{bundle.displayName}}</h3>
+        </li>
+    </ul>
+</div>

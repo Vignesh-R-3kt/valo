@@ -39,4 +39,9 @@ export class ApiServicesService {
   fetchSingleWeaponDetails(id: any) {
     return this.http.get(`${this.baseUrl}/weapons/${id}`);
   }
+
+  // Get all bundles data
+  fetchAllBundlesData() {
+    return this.http.get(`${this.baseUrl}/bundles`);
+  }
 }

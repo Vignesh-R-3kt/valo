@@ -18,8 +18,6 @@ export class MapDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.http.fetchSingleMapDetails(this.uuid).subscribe((res: any) => {
       this.mapDetails = res.data;
-      console.log(this.mapDetails);
-
     })
   }
 

@@ -17,8 +17,6 @@ export class AgentDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.http.fetchSingleAgentDetails(this.uuid).subscribe((res: any) => {
       this.agentDetails = res.data;
-      console.log(this.agentDetails);
-
     })
   }
 
