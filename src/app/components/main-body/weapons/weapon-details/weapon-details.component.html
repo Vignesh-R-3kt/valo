@@ -5,14 +5,14 @@
         <div class="img-wrapper">
             <img src="{{weaponDetails.displayIcon}}" alt="weapon-icon" loading="lazy">
         </div>
-        <div class="text-wrapper">
+        <div class="text-wrapper" *ngIf="weaponDetails.weaponStats">
             <p class="text">Category : <span>{{weaponDetails.shopData.categoryText}}</span></p>
             <p class="text">Cost : <span>{{weaponDetails.shopData.cost}}</span></p>
             <p class="text">Fire rate: <span>{{weaponDetails.weaponStats.fireRate}}</span></p>
             <p class="text">Magazine size: <span>{{weaponDetails.weaponStats.magazineSize}}</span></p>
             <p class="text">Equip Time: <span>{{weaponDetails.weaponStats.equipTimeSeconds}}s</span></p>
         </div>
-        <div class="damage-wrapper">
+        <div class="damage-wrapper" *ngIf="weaponDetails.weaponStats">
             <h4>Damage</h4>
             <table>
                 <tbody *ngFor="let damage of weaponDetails.weaponStats.damageRanges">

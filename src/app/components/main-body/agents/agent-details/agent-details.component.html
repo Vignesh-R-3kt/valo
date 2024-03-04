@@ -1,8 +1,9 @@
 <div class="agent-details-wrapper" *ngIf="agentDetails">
-    <button (click)="closePopup()" class="back-btn">Go back</button>
+    <button (click)="closePopup()" class="back-btn"> Go back</button>
     <div class="agent-details">
         <div class="name-wrapper">
-            <h2>{{"lorem"}} - <span>{{agentDetails.role.displayName}}</span></h2>
+            <h2>{{agentDetails.displayName}} || <span>{{agentDetails.role.displayName}} </span><img
+                    src="{{agentDetails.role.displayIcon}}" alt="icon"></h2>
             <img src="{{agentDetails.displayIconSmall}}" alt="hero-img" loading="lazy">
         </div>
         <div class="hero-img">
@@ -12,9 +13,11 @@
         <div class="abilities-wrapper">
             <h3>Abilities</h3>
             <ul>
-                <li *ngFor="let ability of agentDetails.abilities">
-                    <h4>{{ability.slot}} - <span>{{ability.displayName}}</span></h4>
+                <li *ngFor="let ability of agentDetails.abilities"
+                    [ngClass]="{'empty' : !ability.displayIcon || !ability.displayName}">
                     <img src="{{ability.displayIcon}}" alt="ability" loading="lazy">
+                    <h4>{{ability.slot}} - <span>{{ability.displayName}}</span></h4>
+                    <p>{{ability.description}}</p>
                 </li>
             </ul>
         </div>
