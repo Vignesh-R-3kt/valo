@@ -3,7 +3,7 @@
     <ul>
         <li *ngFor="let weapon of weaponsList" (click)="openPopup(weapon)">
             <div class="img-wrapper">
-                <img src="{{weapon.displayIcon}}" alt="weapon-icon">
+                <img src="{{weapon.displayIcon}}" alt="weapon-icon" loading="lazy">
             </div>
             <h4>{{weapon.displayName}}</h4>
         </li>

@@ -3,7 +3,7 @@
     <div class="content-wrapper">
         <h3>{{weaponDetails.displayName}}</h3>
         <div class="img-wrapper">
-            <img src="{{weaponDetails.displayIcon}}" alt="weapon-icon">
+            <img src="{{weaponDetails.displayIcon}}" alt="weapon-icon" loading="lazy">
         </div>
         <div class="text-wrapper">
             <p class="text">Category : <span>{{weaponDetails.shopData.categoryText}}</span></p>
@@ -58,7 +58,7 @@
             <ul>
                 <li *ngFor="let skin of weaponDetails.skins"
                     [ngClass]="{'empty' : !skin.contentTierUuid || !skin.displayIcon}">
-                    <img src="{{skin.displayIcon}}" alt="">
+                    <img src="{{skin.displayIcon}}" alt="icon" loading="lazy">
                     <h5>{{skin.displayName}}</h5>
                 </li>
             </ul>

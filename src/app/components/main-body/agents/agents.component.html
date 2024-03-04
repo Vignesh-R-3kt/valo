@@ -3,7 +3,7 @@
     <ul class="agents-container">
         <li *ngFor="let agent of agentsList" (click)="openAgentDetails(agent)">
             <div class="img-wrapper">
-                <img src="{{agent.fullPortrait}}" alt="agent-img">
+                <img src="{{agent.fullPortrait}}" alt="agent-img" loading="lazy">
             </div>
             <h3>{{agent.displayName}}</h3>
         </li>

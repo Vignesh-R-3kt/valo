@@ -3,10 +3,10 @@
     <div class="agent-details">
         <div class="name-wrapper">
             <h2>{{"lorem"}} - <span>{{agentDetails.role.displayName}}</span></h2>
-            <img src="{{agentDetails.displayIconSmall}}" alt="hero-img">
+            <img src="{{agentDetails.displayIconSmall}}" alt="hero-img" loading="lazy">
         </div>
         <div class="hero-img">
-            <img src="{{agentDetails.bustPortrait}}" alt="hero-img">
+            <img src="{{agentDetails.bustPortrait}}" alt="hero-img" loading="lazy">
         </div>
         <p class="desc">{{agentDetails.description}}</p>
         <div class="abilities-wrapper">
@@ -14,7 +14,7 @@
             <ul>
                 <li *ngFor="let ability of agentDetails.abilities">
                     <h4>{{ability.slot}} - <span>{{ability.displayName}}</span></h4>
-                    <img src="{{ability.displayIcon}}" alt="ability">
+                    <img src="{{ability.displayIcon}}" alt="ability" loading="lazy">
                 </li>
             </ul>
         </div>

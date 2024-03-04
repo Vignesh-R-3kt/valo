@@ -2,8 +2,6 @@
     <h2>Maps</h2>
     <ul class="maps-container">
         <li *ngFor="let map of mapsList" style="background: url({{map.splash}});" (click)="openDetailsPopup(map)">
-            <div class="img-wrapper">
-            </div>
             <h3>{{map.displayName}}</h3>
         </li>
     </ul>
