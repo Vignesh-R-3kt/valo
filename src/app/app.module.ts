@@ -11,6 +11,7 @@ import { BundlesComponent } from './components/main-body/bundles/bundles.compone
 import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AgentDetailsComponent } from './components/main-body/agents/agent-details/agent-details.component';
+import { MapDetailsComponent } from './components/main-body/maps/map-details/map-details.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AgentDetailsComponent } from './components/main-body/agents/agent-detai
     WeaponsComponent,
     BundlesComponent,
     AgentDetailsComponent,
+    MapDetailsComponent
   ],
   imports: [
     BrowserModule,

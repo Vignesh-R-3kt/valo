@@ -10,7 +10,6 @@ export class ApiServicesService {
 
   constructor(private http: HttpClient) { }
 
-
   // Get all Agents Details
   fetchAllAgentsData() {
     return this.http.get(`${this.baseUrl}/agents?isPlayableCharacter=true`);
@@ -19,5 +18,15 @@ export class ApiServicesService {
   // Get single Agent Details
   fetchSingleAgentDetails(id: any) {
     return this.http.get(`${this.baseUrl}/agents/${id}`);
+  }
+
+  // Get all maps details
+  fetchAllMapsData() {
+    return this.http.get(`${this.baseUrl}/maps`);
+  }
+
+  // Get single map details
+  fetchSingleMapDetails(id: any) {
+    return this.http.get(`${this.baseUrl}/maps/${id}`);
   }
 }
