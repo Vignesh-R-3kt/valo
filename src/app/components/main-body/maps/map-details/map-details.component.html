@@ -1,16 +1,21 @@
 <div class="map-details-wrapper" *ngIf="mapDetails">
     <button (click)="close()" class="back-btn">Go back</button>
     <div class="content-wrapper">
-        <h3>{{mapDetails.displayName}}</h3>
+        <h3>{{mapDetails.displayName}} <span>Co-ordinates:
+                {{mapDetails.coordinates}}</span></h3>
 
         <div class="img-wrapper">
             <img src="{{mapDetails.splash}}" alt="map-img">
         </div>
-        <p class="sites">Sites : {{mapDetails.tacticalDescription.replace('Sites', '')}}</p>
+        <p class="sites">Sites : {{mapDetails.tacticalDescription.replace('Sites', '')}} </p>
         <p class="desc">{{mapDetails.narrativeDescription}}</p>
         <p class="callouts">
             <span class="title">CALLOUTS :</span>
             <span *ngFor="let item of mapDetails.callouts">{{item.regionName}}</span>
         </p>
+
+        <div class="map-img-wrapper">
+            <img src="{{mapDetails.displayIcon}}" alt="map-area">
+        </div>
     </div>
 </div>
