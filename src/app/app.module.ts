@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AgentDetailsComponent } from './components/main-body/agents/agent-details/agent-details.component';
 import { MapDetailsComponent } from './components/main-body/maps/map-details/map-details.component';
+import { WeaponDetailsComponent } from './components/main-body/weapons/weapon-details/weapon-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MapDetailsComponent } from './components/main-body/maps/map-details/map
     WeaponsComponent,
     BundlesComponent,
     AgentDetailsComponent,
-    MapDetailsComponent
+    MapDetailsComponent,
+    WeaponDetailsComponent
   ],
   imports: [
     BrowserModule,

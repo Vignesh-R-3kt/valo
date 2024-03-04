@@ -29,4 +29,14 @@ export class ApiServicesService {
   fetchSingleMapDetails(id: any) {
     return this.http.get(`${this.baseUrl}/maps/${id}`);
   }
+
+  // Get all weapons details
+  fetchAllWeaponsDetails() {
+    return this.http.get(`${this.baseUrl}/weapons`);
+  }
+
+  // Get single weapon details
+  fetchSingleWeaponDetails(id: any) {
+    return this.http.get(`${this.baseUrl}/weapons/${id}`);
+  }
 }

@@ -1,0 +1,67 @@
+<div class="weapon-details-wrapper" *ngIf="weaponDetails">
+    <button class="back-btn" (click)="close()">Go back</button>
+    <div class="content-wrapper">
+        <h3>{{weaponDetails.displayName}}</h3>
+        <div class="img-wrapper">
+            <img src="{{weaponDetails.displayIcon}}" alt="weapon-icon">
+        </div>
+        <div class="text-wrapper">
+            <p class="text">Category : <span>{{weaponDetails.shopData.categoryText}}</span></p>
+            <p class="text">Cost : <span>{{weaponDetails.shopData.cost}}</span></p>
+            <p class="text">Fire rate: <span>{{weaponDetails.weaponStats.fireRate}}</span></p>
+            <p class="text">Magazine size: <span>{{weaponDetails.weaponStats.magazineSize}}</span></p>
+            <p class="text">Equip Time: <span>{{weaponDetails.weaponStats.equipTimeSeconds}}s</span></p>
+        </div>
+        <div class="damage-wrapper">
+            <h4>Damage</h4>
+            <table>
+                <tbody *ngFor="let damage of weaponDetails.weaponStats.damageRanges">
+                    <tr>
+                        <th>
+                            Range start meters
+                        </th>
+                        <th>
+                            Range end meters
+                        </th>
+                        <th>
+                            Head damage
+                        </th>
+                        <th>
+                            Body damage
+                        </th>
+                        <th>
+                            Leg damage
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{damage.rangeStartMeters}}
+                        </td>
+                        <td>
+                            {{damage.rangeEndMeters}}
+                        </td>
+                        <td>
+                            {{damage.headDamage}}
+                        </td>
+                        <td>
+                            {{damage.bodyDamage}}
+                        </td>
+                        <td>
+                            {{damage.legDamage}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="skins-wrapper">
+            <h4>Skins</h4>
+            <ul>
+                <li *ngFor="let skin of weaponDetails.skins"
+                    [ngClass]="{'empty' : !skin.contentTierUuid || !skin.displayIcon}">
+                    <img src="{{skin.displayIcon}}" alt="">
+                    <h5>{{skin.displayName}}</h5>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

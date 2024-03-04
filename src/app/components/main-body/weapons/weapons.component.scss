@@ -1,0 +1,46 @@
+.conent-container {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    li {
+      width: calc(25% - 12px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: #373740;
+      border-radius: 6px;
+      padding: 18px;
+      cursor: pointer;
+      border: 1px solid #27272f;
+
+      &:hover {
+        background: #c1c1c4;
+        transition: all 0.4s ease;
+
+        h4 {
+          color: #27272f;
+        }
+      }
+
+      .img-wrapper {
+        width: 100%;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 80%;
+          height: 100px;
+          object-fit: contain;
+        }
+      }
+
+      h4 {
+        color: #c1c1c4;
+      }
+    }
+  }
+}

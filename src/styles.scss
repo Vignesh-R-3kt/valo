@@ -26,7 +26,8 @@ a {
 }
 
 img {
-  opacity: 0.03;
+  opacity: 0.05;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
 
 button {
