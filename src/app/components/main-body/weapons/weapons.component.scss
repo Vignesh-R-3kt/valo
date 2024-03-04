@@ -20,6 +20,13 @@
         background: #c1c1c4;
         transition: all 0.4s ease;
 
+        .img-wrapper {
+          img {
+            transform: scale(1.2);
+            transition: all 0.2s ease;
+          }
+        }
+
         h4 {
           color: #27272f;
         }
