@@ -43,3 +43,17 @@ button {
     font-size: 30px;
   }
 }
+
+app-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background: #1f1f1f90;
+}

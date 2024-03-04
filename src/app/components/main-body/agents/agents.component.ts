@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServicesService } from 'src/app/services/api-services.service';
+import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
   selector: 'app-agents',
@@ -11,11 +12,15 @@ export class AgentsComponent implements OnInit {
   isAgentDetailsOpen: boolean = false;
   uuid: any;
 
-  constructor(private api: ApiServicesService) { }
+  constructor(private api: ApiServicesService, private loader: LoaderService) { }
 
   ngOnInit(): void {
+    this.loader.show();
     this.api.fetchAllAgentsData().subscribe((res: any) => {
       this.agentsList = res.data.reverse();
+      setTimeout(() => {
+        this.loader.close();
+      }, 1000)
     })
   }
 
