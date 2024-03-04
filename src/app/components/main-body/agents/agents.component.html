@@ -1,11 +1,11 @@
 <div class="conent-container">
-    <h2>Alorem</h2>
+    <h2>Agents</h2>
     <ul class="agents-container">
         <li *ngFor="let agent of agentsList" (click)="openAgentDetails(agent)">
             <div class="img-wrapper">
                 <img src="{{agent.fullPortrait}}" alt="agent-img">
             </div>
-            <h3>lorem</h3>
+            <h3>{{agent.displayName}}</h3>
         </li>
     </ul>
 </div>
