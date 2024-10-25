@@ -17,7 +17,7 @@ export class MapsComponent implements OnInit {
   ngOnInit(): void {
     this.loader.show();
     this.http.fetchAllMapsData().subscribe((res: any) => {
-      this.mapsList = res.data.filter((ele: any) => ele.narrativeDescription);
+      this.mapsList = res.data.filter((ele: any) => ele);
       setTimeout(() => {
         this.loader.close();
       }, 1000)
